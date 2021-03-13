@@ -1,0 +1,1517 @@
+.tariffProvider
+  position: relative
+  display: flex
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+  background: #FFF
+  font-family: "SF Pro Text", Arial, Verdana, sans-serif
+
+  &__wrapper
+    width: calc(100% + 4px)
+    margin: -11px -2px 0
+    border: 1px solid #FFF
+    border-radius: 4px
+
+  &__logo
+    padding-left: 9px
+    img
+      display: flex
+      max-height: 40px
+      max-width: 100%
+
+  &__menu
+    position: absolute
+    opacity: 0
+    top: 100%
+    margin-top: 2px
+    right: -1px
+    left: -1px
+    pointer-events: none
+    &-toggler
+      margin-top: -1px
+      margin-right: -1px
+    &.is-active
+      opacity: 1
+      pointer-events: auto
+
+  &__contact
+    margin-left: auto
+    &-caption,&-notice
+      display: none
+    &-number
+      font-size: 0
+      background: #71BA1C
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 48px
+      height: 48px
+
+  &__availability
+    background: #FFF
+    border: 2px solid #FFF
+    //box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+    border-radius: 0 0 4px 4px
+    color: $primaryBlue
+    font-size: 14px
+    padding: 10px
+    font-weight: 600
+    &-icon
+      display: none
+    .link
+      display: inline-block
+      margin-top: 2px
+      font-weight: bold
+
+  &__check
+    display: flex
+    padding: 12px 12px 0
+    align-items: center
+    font-size: 14px
+    &-text
+      font-size: 14px
+      padding-right: 20px
+      color: $primaryBlue
+
+  &__checkForm
+    padding: 24px 16px
+    font-size: 16px
+    display: block
+    .popup &
+      display: block
+      padding: 4px
+    &-header
+      display: flex
+      flex-wrap: wrap
+    &-caption
+      flex: 100% 0 0
+      color: #000
+      font-size: 20px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-weight: 600
+      margin-bottom: 16px
+    &-label
+      font-weight: 600
+      align-self: flex-end
+      color: $darkGray
+    &-clean
+      margin-left: auto
+      font-size: 14px
+      align-self: flex-end
+    &-form
+      padding-top: 12px
+    &-row
+      margin-bottom: 12px
+      &_flex
+        display: flex
+        justify-content: space-between
+      .inputPlaceholder
+        flex: calc(50%  - 6px) 0 0
+    .btn-submit
+      display: flex
+      justify-content: center
+
+  &__checking
+    text-align: center
+    padding: 150px 30px
+    display: none
+    .popup &
+      display: block
+    &-icon
+      margin-bottom: 20px
+    &-text
+      color: $accentPink
+      width: 280px
+      margin-left: auto
+      margin-right: auto
+
+  &__checkSuccess
+    text-align: center
+    padding: 150px 30px
+    font-size: 16px
+    display: none
+    .popup &
+      display: block
+    &-icon
+      margin-bottom: 12px
+      .svg-image-success
+        margin-left: auto
+        margin-right: auto
+    &-text
+      color: $accentPink
+
+  &__checkUnsuccess
+    text-align: center
+    padding: 150px 30px 24px
+    font-size: 16px
+    display: none
+    .popup &
+      display: block
+    &-address
+      display: none
+    &-icon
+      margin-bottom: 12px
+      .svg-image-unsuccess
+        margin-left: auto
+        margin-right: auto
+    &-text
+      color: $darkGray
+      width: 225px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 64px
+    &-other
+      color: $accentPink
+      font-size: 20px
+      line-height: 120%
+      &_address
+        display: none
+    .btn
+      display: flex
+      justify-content: center
+      margin-top: 24px
+      height: 58px
+
+
+  @include mq($until: desktop)
+    &__menu
+      background: #FFF
+      left: -1px
+      right: -1px
+      &-item
+        border-bottom: 1px solid #F7F7F7
+        .link
+          padding: 12px 46px
+          display: block
+          color: $primaryBlue
+          &__text
+            text-decoration: none
+
+  @include mq($from: desktop)
+    &__wrapper
+      margin: -32px 0 0
+    &__contact
+      background: #F7F7F7
+      padding: 20px 40px 20px 35px
+      white-space: nowrap
+      margin-left: 0
+      border-bottom: 3px solid #FFF
+      &-caption
+        margin-bottom: 4px
+      &-number
+        width: auto
+        height: auto
+        display: block
+        font-size: 20px
+        background: none
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        margin-bottom: 4px
+      &-icon
+        display: none
+      &-caption
+        display: block
+        font-size: 16px
+        color: $primaryBlue
+        font-weight: 600
+      &-notice
+        font-size: 14px
+        color: $darkGray
+        display: block
+        font-weight: normal
+    &__menu
+      position: static
+      opacity: unset
+      pointer-events: auto
+      font-size: 16px
+      display: flex
+      margin-left: auto
+      align-items: center
+      padding-bottom: 8px
+      justify-content: flex-end
+      padding-right: 3%
+      &-item
+        height: 30px
+        display: flex
+        align-items: center
+        padding-left: 6.35%
+        padding-right: 6.35%
+        &:not(:first-child)
+          border-left: 1px solid #EDEDED
+      &-link
+        display: block
+        white-space: nowrap
+
+      &-toggler
+        display: none
+    &__logo
+      height: 108px
+      align-items: center
+      display: flex
+      padding-left: 30px
+      padding-bottom: 14px
+      img
+        max-height: 65px
+    &__availability
+      margin-top: 1px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 16px
+      font-family: "SF Pro Text", Arial, Verdana, sans-serif
+      padding: 19px 0
+      &-icon
+        display: inline-block
+        margin-right: 10px
+      .link
+        margin: 0
+    &__wrapper
+      margin-bottom: -30px
+    &__check
+      display: none
+    &__checkForm
+      padding: 19px 22px
+      display: block
+      &-clean
+        margin-right: 216px
+      &-label
+        display: none
+      &-caption
+        flex: 1
+        margin: 0
+        font-size: 16px
+        color: $darkGray
+      &-form
+        display: flex
+      &-row
+        display: block
+        padding-right: 16px
+        margin: 0
+        &:first-of-type,&:nth-child(2)
+          flex: 1
+        &_flex
+          display: flex
+          .inputPlaceholder
+            width: 110px
+      .btn-submit
+        flex: 200px 0 0
+        max-width: 200px
+
+    &__checking
+      background: #efefef
+      padding: 0
+      position: relative
+      display: block
+      &-text
+        display: none
+      &-icon
+        margin: 0
+        height: 118px
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__checkSuccess
+      padding: 19px 22px
+      display: block
+    &__checkUnsuccess
+      padding: 19px 22px
+      text-align: left
+      font-family: "SF Pro Text", Arial, Verdana, sans-serif
+      display: block
+      &-text,&-icon
+        display: none
+      &-container
+        display: flex
+        align-items: center
+      &-address
+        display: flex
+        align-items: center
+        max-width: 50%
+        &-text
+          display: grid
+        &-icon
+          margin-right: 6px
+      &-other
+        font-size: 16px
+        line-height: 125%
+        font-weight: normal
+        color: $primaryBlue
+        padding-left: 24px
+        margin-left: 24px
+        border-left: 1px solid #efefef
+        margin-right: auto
+        padding-right: 12px
+        font-family: "SF Pro Text", Arial, Verdana, sans-serif
+        min-width: 28%
+        flex: 1
+        &_address
+          display: block
+        b
+          font-weight: 600
+
+      .btn
+        white-space: nowrap
+        margin: 0
+        padding-left: 30px
+        padding-right: 30px
+        height: 50px
+
+
+.tariff
+  padding-top: 18px
+  &__info
+    padding-left: 4px
+    padding-right: 4px
+    margin-bottom: 17px
+    &-title
+      margin-bottom: 10px
+      h1
+        font-size: 20px
+        margin: 0
+    &-description
+      font-size: 14px
+      line-height: 115%
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+      li
+        margin-bottom: 6px
+
+
+  @include mq($from: desktop)
+    padding-top: 44px
+    display: flex
+    flex-wrap: wrap
+    &__info
+      padding: 0
+      margin-bottom: 32px
+      flex: 100% 0 0
+      &-title
+        margin-bottom: 14px
+        h1
+          font-size: 32px
+          font-weight: bold
+      &-description
+        li
+          display: flex
+          margin-bottom: 4px
+          &:before
+            content: '—'
+            margin-right: 4px
+            display: inline-block
+    &__sidebar
+      flex: 269px 0 0
+      max-width: 269px
+      margin-left: 16px
+      padding-top: 35px
+      .orderConnect
+        display: block
+        &_complete
+          &.hidden
+            display: none
+
+    &__content
+      flex: calc(100% - 269px - 16px) 0 0
+
+
+.crumbs_tariff
+  display: none
+  @include mq($from: desktop)
+    display: block
+
+
+.tariffItem
+  margin-bottom: 18px
+  &__title
+    font-weight: 600
+    color: $darkGray
+    font-size: 20px
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 8px
+  &__header
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    border-radius: 4px 4px 0 0
+    display: flex
+    background: #FFF
+    margin-left: -8px
+    margin-right: -8px
+    margin-bottom: 1px
+    &-icon
+      width: 54px
+      min-width: 54px
+      height: 54px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #f7f7f7
+      margin-right: 12px
+      img
+        display: block
+        width: 32px
+
+    &-content
+      display: flex
+      align-items: flex-start
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+      padding: 8px
+      flex: 1
+    &-cost
+      font-size: 20px
+      display: flex
+      align-items: baseline
+      margin-bottom: 2px
+      &-value
+        font-size: 32px
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        margin-right: 4px
+        font-weight: 600
+        line-height: 1
+        .unlimited
+          font-size: 38px
+          line-height: .6
+
+    &-description
+      line-height: 115%
+      color: $darkGray
+      font-size: 14px
+    &-searchBtn
+      background: #F7F7F7
+      border: 1px solid #EDEDED
+      border-radius: 4px
+      width: 44px
+      height: 44px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-left: auto
+      cursor: pointer
+      align-self: center
+
+    &-status
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 0
+      width: 104px
+      min-width: 104px
+
+      &:before
+        content: attr(data-status)
+        display: inline-block
+        font-size: 16px
+        color: $accentPink
+        font-weight: 600
+      .cost
+        display: flex
+        align-items: center
+        &__value
+          font-size: 24px
+          font-weight: 600
+          font-family: Montserrat, Arial, Verdana, sans-serif
+          margin-right: 4px
+        &__period
+          font-size: 12px
+          font-weight: normal
+          span
+            display: block
+            border-top: 1px solid #000
+            margin-top: 2px
+            line-height: 1
+    &-container
+      .tariffItem__header-info
+        margin-bottom: 12px
+        &:last-of-type
+          margin-bottom: 0
+    &_antivirus
+      border-radius: 4px
+      .tariffItem__header
+        &-status
+          align-items: flex-start
+          padding-top: 14px
+        &-content
+          padding: 12px 8px 12px 12px
+    &_additional
+      border-radius: 4px
+      .tariffItem__header
+        &-status
+          align-items: center
+          padding-top: 12px
+          padding-bottom: 12px
+          flex-direction: column
+          justify-content: flex-start
+          .cost
+            margin-bottom: 22px
+        &-content
+          padding: 8px
+
+      .tariffItem__toggler_desktop
+        display: none
+
+
+  &__add
+    margin-top: 8px
+    text-align: right
+
+  &__addEquipment
+    background: #FFF
+    padding: 12px 4px
+    border-radius: 10px 10px 0 0
+    .popup &
+      display: block
+      margin: -12px
+    &-header
+      padding: 12px
+      border-bottom: 1px solid #F5F5F5
+
+      &-caption
+        font-size: 20px
+        font-weight: 600
+        color: $darkGray
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        margin-bottom: 8px
+      &-count
+        display: flex
+        .inputCounter
+          .input
+            background: #f7f7f7
+        .inputSelect
+          &__value
+            background: #f7f7f7
+      &-close
+        display: none
+
+    .tariffEquipmentItem
+      margin: 0
+      background: #FFF
+      border-radius: 0
+      box-shadow: none
+      border: none
+      &:not(:last-of-type)
+        border-bottom: 1px solid #F5F5F5
+      &__cost
+        font-family: Montserrat, Arial, Verdana, sans-serif
+      &__count
+        min-width: 104px
+      &__checked
+        display: inline-flex
+        align-items: center
+        font-weight: bold
+        color: $accentPink
+        font-size: 14px
+        margin-left: auto
+        .svg-image-checked
+          margin-right: 5px
+      &_selected
+        box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+        position: relative
+        margin-left: -4px
+        margin-right: -4px
+        padding-left: 4px
+        padding-right: 4px
+
+    .btn
+      display: flex
+      justify-content: center
+
+  &__additional
+    display: flex
+    flex: 1
+    &-icon
+      display: none
+    &-title
+      margin-bottom: 18px
+    &-description
+      line-height: 125%
+      ul
+        padding: 0
+        margin: 0
+        color: $darkGray
+        font-size: 14px
+        line-height: 114%
+        list-style: none
+      li
+        margin-bottom: 11px
+        &:last-of-type
+          margin-bottom: 0
+    &-toggler
+      margin-left: auto
+      padding-left: 10px
+  &__subs
+    display: flex
+    &-icon
+      width: 54px
+      max-width: 54px
+      flex: 54px 0 0
+      margin-right: 12px
+      img
+        display: block
+        max-width: 100%
+    &-description
+      font-size: 14px
+      line-height: normal
+      color: $darkGray
+    &-title
+      color: #000
+      font-size: 16px
+      margin-bottom: 4px
+
+  &_notes
+    .tariffItem__header
+      &-icon
+        display: none
+      &-description
+        color: #000
+        line-height: 130%
+
+  .popularFaq
+    &__item
+      &-icon
+        border: 1px solid #E0E0E0
+        border-radius: 4px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+        min-width: 24px
+        padding: 0
+        background: #FFF
+        .svg-image-arrow-down
+          opacity: .5
+      &-toggler
+        border: 2px solid #FFF
+        border-radius: 4px
+        background: #F7F7F7
+        padding: 6px 8px 6px 12px
+        min-height: unset
+        box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+        &:hover
+          background: #FFF
+      &-content
+        padding: 6px 12px
+        border: 2px solid #FFF
+        margin-top: 1px
+        p
+          &:last-of-type
+            margin-bottom: 0
+
+  @include mq($from: tablet)
+    .tariffEquipmentItem
+      &_not-required
+        display: flex
+        align-items: center
+        .tariffEquipmentItem
+          &__content
+            padding: 6px 12px
+            margin-left: auto
+            .btn
+              margin: 0
+          &__title
+            min-height: 80px
+            align-items: center
+            display: flex
+            padding-top: 0
+            padding-bottom: 0
+      &__controls
+        margin-left: auto
+        display: flex
+        .text-right
+          align-self: center
+        .btn
+          align-self: flex-end
+          margin-bottom: 8px
+    &__addEquipment
+      &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__header
+      &-container
+        display: flex
+        justify-content: space-between
+        flex: 1
+        padding-right: 2%
+      &_antivirus
+        .tariffItem__header
+          &-content
+            align-items: center
+            padding: 8px
+          &-status
+            align-items: center
+            padding-top: 0
+      &_additional
+        .tariffItem__header
+          &-status
+            align-items: center
+            flex-direction: row
+            .cost
+              margin: 0
+        .tariffItem__toggler_desktop
+          display: flex
+          align-items: center
+
+    &__additional
+      &-icon
+        display: flex
+        width: 80px
+        height: 80px
+        border-radius: 4px
+        align-items: center
+        justify-content: center
+        background: #F7F7F7
+        margin-right: 24px
+        img
+          display: block
+          max-width: 100%
+          max-height: 100%
+          margin: auto
+      &-toggler
+        align-items: center
+        display: flex
+      &-title
+        margin-bottom: 4px
+      &-description
+        align-self: center
+        li
+          margin-bottom: 2px
+          display: flex
+          &:before
+            content: '—'
+            margin-right: 4px
+
+
+    &__toggler
+      &_mobile
+        display: none
+    &__subs
+      &-icon
+        flex: 80px 0 0
+        width: 80px
+        max-width: 80px
+        margin-right: 24px
+      &-description
+        align-self: center
+    &_notes
+      .tariffItem__header
+        &-icon
+          display: flex
+        &-description
+          padding: 0
+          font-size: 14px
+          max-width: 545px
+
+  @include mq($from: desktop)
+    &__title
+      margin-bottom: 12px
+    &__header
+      margin-left: 0
+      margin-right: 0
+      &-icon
+        width: 80px
+        height: 80px
+        min-width: 80px
+        margin-right: 24px
+        img
+          width: 44px
+          height: 44px
+      &-info
+        display: flex
+        flex-grow: 1
+        align-items: stretch
+        align-self: stretch
+      &-cost
+        display: flex
+        align-items: center
+        margin-bottom: 0
+        padding-right: 20px
+        margin-right: 20px
+        border-right: 1px solid #EDEDED
+        &-period
+          margin-top: 8px
+      &-description
+        display: flex
+        align-items: center
+        font-size: 16px
+        line-height: 125%
+        padding-top: 11px
+      &-searchBtn
+        height: 72px
+        width: 72px
+        align-self: center
+      &-status
+        font-size: 16px
+        color: $accentPink
+        padding-right: 24px
+        padding-left: 50px
+        font-weight: 600
+        width: auto
+        &:before
+          display: none
+        .cost
+          color: #000
+      &-container
+        align-self: center
+        .tariffItem__header
+          &-cost
+            padding: 0
+            margin: 0
+            border: none
+          &-info
+            display: block
+            margin: 0
+            padding-right: 10px
+          &-description
+            font-size: 14px
+            margin: 0
+            padding: 0
+    &__addEquipment
+      border-radius: 0
+      box-shadow: 0 0 22px rgba(75, 163, 218, 0.15)
+      &-header
+        &-count
+          margin-left: auto
+        &-close
+          display: block
+          padding-left: 24px
+
+
+.tariffEnded
+  background: #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  text-align: center
+  margin-bottom: 16px
+  &__intro
+    padding: 12px 24px 24px
+  &__icon
+    display: flex
+    justify-content: center
+    margin-bottom: 12px
+  &__title
+    font-weight: bold
+    margin-bottom: 12px
+    font-family: Montserrat, Arial, Verdana, sans-serif
+  &__text
+    font-size: 14px
+    line-height: 114%
+    margin-bottom: 24px
+  &__button
+    .btn
+      display: flex
+      justify-content: center
+
+  &__form
+    padding: 12px 24px 24px
+    &-row
+      margin-bottom: 12px
+      &_button
+        margin-bottom: 0
+    .btn-submit
+      display: flex
+      justify-content: center
+
+
+  @include mq($from: tablet)
+    &__intro
+      padding: 24px 36px 24px 24px
+      display: flex
+      align-items: center
+      text-align: left
+
+    &__icon
+      margin-right: 29px
+      margin-bottom: 0
+      img
+        display: block
+        width: 80px
+    &__content
+      margin-right: 20px
+    &__button
+      margin-left: auto
+    &__text
+      margin-bottom: 0
+    &__form
+      &-container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+      &-row
+        flex: calc(50% - 8px) 0 0
+
+  @include mq($from: desktop)
+    &__title
+      font-size: 20px
+    &__form
+      padding-bottom: 12px
+      text-align: left
+      &-container
+        flex-wrap: nowrap
+      &-row
+        flex: auto
+        padding-right: 12px
+        &_name
+          flex: 17% 0 0
+        &_tel
+          flex: 180px 0 0
+          padding-right: 12px
+        &_date
+
+          flex: 1
+        &_button
+          width: auto
+          flex: 0
+          padding: 0
+          text-align: left
+    .btn-submit
+      display: inline-flex
+      margin-right: auto
+      padding-left: 20px
+      padding-right: 20px
+
+
+.tariffEquipmentItem
+  background: #F7F7F7
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 0 0 4px 4px
+  margin-left: -8px
+  margin-right: -8px
+  &_selected
+    min-height: 92px
+  &__specifications
+    display: table
+    font-size: 14px
+    margin-bottom: 17px
+    &-row
+      display: table-row
+    &-title
+      display: table-cell
+      color: $darkGray
+      padding-right: 12px
+      padding-bottom: 8px
+    &-value
+      display: table-cell
+      padding-bottom: 5px
+      font-weight: 600
+    .link
+      white-space: nowrap
+    p
+      margin: 0 0 4px
+
+  .cost
+    display: inline-flex
+    align-items: center
+    &__value
+      font-weight: bold
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      margin-right: 5px
+      font-size: 24px
+    &__period
+      font-size: 12px
+      span
+        display: block
+        border-top: 1px solid #000
+        margin-top: 2px
+    &_inline
+      font-size: 14px
+      .cost
+        &__value
+          font-size: inherit
+        &__period
+          font-size: 14px
+
+  &__header
+    display: flex
+    padding: 6px
+    align-items: center
+  &__thumb
+    background: #FFF
+    border-radius: 4px
+    display: flex
+    width: 54px
+    height: 54px
+    min-width: 54px
+    align-items: center
+    justify-content: center
+    margin-right: 12px
+    img
+      display: block
+      max-width: 100%
+  &__title
+    font-weight: 600
+    line-height: 125%
+    flex: 1
+    padding-right: 10px
+    padding-bottom: 2px
+  &__control
+    align-self: flex-start
+    padding: 6px 4px 0 0
+  &__content
+    padding: 4px 10px 12px
+  &__counts
+    display: flex
+    align-items: center
+  &__specs
+    p
+      margin: 3px 0
+      font-size: 14px
+  &__count
+    flex: 72px 0 0
+    max-width: 72px
+    padding-right: 8px
+    .input
+      background: #FFF
+  &__conditions
+    flex: 1
+  &__list
+    display: table
+    font-size: 14px
+    margin-top: 8px
+    margin-bottom: 8px
+    &-row
+      display: table-row
+    &-cell
+      display: table-cell
+      padding: 4px 12px
+      &:first-child
+        color: $darkGray
+  &__summary
+    padding-left: 12px
+    min-width: 100px
+    text-align: right
+
+
+  @include mq($from: tablet)
+    &__content
+      display: flex
+    &__specifications
+      margin-bottom: 0
+      margin-right: 20px
+    &__counts
+      margin-left: auto
+
+
+
+  @include mq($from: desktop)
+    margin-left: 0
+    margin-right: 0
+    &__header
+      padding-left: 110px
+      padding-right: 20px
+      position: relative
+    &__thumb
+      width: 80px
+      height: 80px
+      position: absolute
+      left: 6px
+      top: 6px
+      background: #f7f7f7
+    &__content
+      padding-left: 110px
+      padding-right: 20px
+    &__title
+      padding-top: 5px
+    .tariffEquipmentItem__conditions
+      width: 170px
+      flex: 170px 0 0
+    &__specs
+      flex: 1
+    &__summary
+      .cost_inline
+        font-size: 16px
+        .cost
+          &__value
+            font-weight: bold
+          &__period
+            font-size: 16px
+
+    &__list
+      margin-left: 98px
+    &_not-required
+      .tariffEquipmentItem
+        &__thumb
+          background: none
+        &__content
+          padding-right: 20px!important
+      .svg-image-not-required-dims
+        width: 60px
+        height: 60px
+
+
+.tvPackage
+  background: #F7F7F7
+  border: 2px solid #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  margin-left: -8px
+  margin-right: -8px
+  padding: 10px 6px
+  margin-bottom: 1px
+  &__title
+    font-weight: bold
+    color: $darkGray
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 10px
+
+  &__info
+    &:not(:last-of-type)
+      padding-bottom: 8px
+      margin-bottom: 9px
+      border-bottom: 1px solid #E6E6E6
+
+    &-row
+      display: flex
+      align-items: center
+
+    &-checker
+      flex: 32px 0 0
+      .inputRadio,.inputCheckbox
+        margin-top: -1px
+    &-label
+      font-weight: bold
+      flex: 40% 0 0
+    &-counts
+      font-size: 14px
+      b
+        font-size: 16px
+      .link
+        &__text
+          font-size: 14px
+          text-decoration: none
+          border-bottom: 1px dashed
+
+    &-cost
+      text-align: right
+      margin-left: auto
+      font-size: 14px
+    &.is-checked
+      .tvPackage__info
+        &-label
+          color: $accentPink
+        &-cost
+          color: $accentPink
+          display: block
+    &-list
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 10px
+
+    .link__dropicon
+      display: none
+  &__channels
+    background: #FFF
+    padding: 8px 12px
+    margin: 8px -7px -9px
+    border-bottom: 1px solid #E6E6E6
+    &-caption
+      display: none
+    &-list
+      display: flex
+      flex-wrap: wrap
+      margin-right: -8px
+    &-item
+      flex: 110px 0 0
+      display: flex
+      align-items: center
+      font-size: 12px
+      line-height: 12px
+      margin-bottom: 12px
+      margin-right: 5px
+    &-thumb
+      margin-right: 8px
+      display: flex
+      width: 24px
+      height: 24px
+
+      img
+        display: block
+        max-width: 100%
+        max-height: 100%
+
+  &_search
+    background: #FFF
+    margin: -12px
+    padding: 12px
+    .popup &
+      display: flex
+      flex-direction: column
+      border: none
+    .tvPackage
+      &__search
+        position: relative
+        margin-bottom: 12px
+        display: flex
+        align-items: center
+        &-field
+          position: relative
+          flex: 1
+        &-close
+          padding-left: 12px
+          display: none
+        &-clear
+          position: absolute
+          right: 12px
+          bottom: 0
+          top: 0
+          align-items: center
+          z-index: 1
+          display: none
+        &-icon
+          position: absolute
+          z-index: 2
+          top: 0
+          bottom: 0
+          left: 0
+          padding-left: 12px
+          display: flex
+          align-items: center
+      &__title
+        color: #000
+      &__totall
+        display: flex
+        align-items: center
+        box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+        margin: auto -12px -12px
+        padding: 12px
+        &-button
+          display: none
+        &-summ
+          margin-left: auto
+        &-list
+          margin-top: 8px
+
+    .cost
+      display: flex
+      align-items: center
+      &__value
+        font-size: 32px
+        font-weight: bold
+        font-family: Montserrat, Arial, Verdana, sans-serif
+      &__period
+        padding-left: 4px
+        span
+          display: block
+          border-top: 1px solid
+
+
+  @include mq($from: desktop)
+    margin-left: 0
+    margin-right: 0
+    background: none
+    padding: 23px 22px 24px 110px
+    &__title
+      margin-bottom: 15px
+    &__info
+      &:not(:last-of-type)
+        border: none
+      &-checker
+        flex: 36px 0 0
+      &-cost
+        font-size: 16px
+      &-counts
+        padding-bottom: 2px
+        b
+          font-size: 20px
+          display: inline-block
+          line-height: 1
+      &-allItems
+        padding-left: 35px
+      &-list
+        margin-bottom: 14px
+      .link__dropicon
+        display: inline-flex
+        margin-bottom: -3px
+        margin-top: -3px
+    &__channels
+      padding: 12px
+      margin: 18px 0 0 24px
+      &-caption
+        font-weight: 600
+        display: block
+        margin-bottom: 14px
+      &-item
+        flex: 30% 0 0
+        margin: 0 0 12px
+        font-size: 16px
+    &_search
+      padding: 0
+      margin: 0 0 5px
+      background: #FFF
+      border: none
+      z-index: 2
+      .tvPackage
+        &__search
+          box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+          padding: 24px
+          margin-bottom: 12px
+          &-close,&-clear
+            display: flex
+        &__content
+          padding: 23px 22px 24px 110px
+        &__info
+          .link
+            align-items: flex-end
+        &__totall
+          margin: 0
+          &-button
+            display: block
+            margin-left: 24px
+          &-text
+            font-size: 20px
+          &-list
+            margin-top: 4px
+    .cost
+      &__value
+        font-size: 48px
+        font-weight: 600
+      &__period
+        font-size: 16px
+
+
+.tariffInfo
+  background: #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  .card__features
+    padding: 24px 16px
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    background: #FFF
+    border-radius: 4px 4px 0 0
+    line-height: 125%
+    font-size: 16px
+    margin-bottom: 17px
+    .card__feature
+      &:last-of-type
+        margin-bottom: 0
+  .card__properties
+    padding: 12px 16px
+
+  .card__property
+    &-cost
+      margin-bottom: 0
+      &-value
+        font-size: 20px
+        font-weight: 600
+      &_empty
+        margin-bottom: 1px
+        .card__property-cost-period
+          padding-top: 5px
+
+.tariffOrder
+  display: flex
+  padding: 12px
+  background: #FFF
+  .card__property
+    display: block
+    padding-right: 16px
+    margin-left: auto
+    font-size: 14px
+    margin-bottom: 0
+    &-title
+      line-height: 1
+    &-cost
+      &-value
+        font-size: 48px
+        font-weight: 600
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        line-height: 1
+      &-period
+        font-size: 16px
+  .btn-submit
+    height: 56px
+    flex: 50% 0 0
+    max-width: 206px
+    margin-right: auto
+    padding-left: 24px
+    padding-right: 24px
+    white-space: nowrap
+
+  &_desktop
+    padding: 10px 0 0
+    margin-bottom: 10px
+    display: none
+  &_mobile
+    margin-left: -12px
+    margin-right: -12px
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  @include mq($from: desktop)
+    &_mobile
+      display: none
+    &_desktop
+      display: flex
+
+.orderCompletedPage
+  .crumbs
+    display: none
+  &__thanks
+    padding-top: 50px
+    padding-bottom: 50px
+    position: relative
+    text-align: center
+    &-icon
+      text-align: center
+      position: relative
+      margin-bottom: 40px
+    &-text
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-weight: 600
+      color: #FFF
+      font-size: 64px
+      position: absolute
+      right: 0
+      left: 0
+      top: 90px
+    &-notice
+      font-weight: 600
+      line-height: 125%
+      width: 180px
+      margin-left: auto
+      margin-right: auto
+
+  @include mq($from: desktop)
+    .crumbs
+      display: block
+      background: #FFF
+
+.orderForm
+  background: #FFF
+  padding-top: 24px
+  padding-bottom: 24px
+  max-width: 1110px
+  margin-left: auto
+  margin-right: auto
+  &__container
+    width: 350px
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+  &__caption
+    font-size: 20px
+    font-weight: 600
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 12px
+  &__row
+    margin-bottom: 12px
+    &_flex
+      display: flex
+      justify-content: space-between
+      .inputPlaceholder
+        flex: calc(50% - 6px) 0 0
+  .btn-submit
+    display: flex
+    justify-content: center
+    height: 56px
+    margin-bottom: 12px
+  &__notice
+    font-size: 10px
+    line-height: 120%
+    text-align: center
+    color: $darkGray
+    margin-bottom: 24px
+
+  @include mq($from: tablet)
+    border-radius: 4px
+    margin-bottom: 12px

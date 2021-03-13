@@ -1,0 +1,123 @@
+.mostPopular
+  padding-top: 15px
+  padding-bottom: 26px
+  &__caption
+    color: $darkGray
+    h2
+      margin-bottom: 0
+  &__list
+    margin-left: -12px
+    margin-right: -12px
+    .swiper-slide
+      width: auto
+      padding-right: 12px
+    &-more
+      text-align: center
+      display: none
+      font-weight: bold
+  &__item
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    border-radius: 4px
+    display: block
+    color: #000
+    width: 320px
+    transition: box-shadow .3s ease
+    &:hover
+      color: #000
+      .mostPopular__item-title
+        color: $accentBlue
+        transform: translateX(20px)
+        &:before
+          opacity: 1
+    &-content
+      padding: 16px 16px 11px
+    &-title
+      font-size: 20px
+      font-weight: 600
+      line-height: 125%
+      margin-bottom: 7px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      transition: color .3s ease, transform .3s ease
+      position: relative
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        padding: 0
+        opacity: 0
+        left: -20px
+        top: 5px
+
+    &-intro
+      line-height: 125%
+
+    &-time
+      display: flex
+      align-items: center
+      color: $darkGray
+      margin-bottom: 3px
+      padding-top: 3px
+      .svg-image-time-gray
+        margin-right: 3px
+        display: inline-block
+        margin-top: -3px
+    &-image
+      border: 4px solid #FFF
+      border-radius: 0 0 4px 4px
+      overflow: hidden
+      position: relative
+      &:after
+        content: ''
+        display: block
+        padding-bottom: 47%
+      img
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: contain
+        object-position: center
+
+  @include mq($from: desktop)
+    padding-top: 40px
+    padding-bottom: 73px
+    &__caption
+      h2
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 12px
+    &__item
+      width: auto
+      display: flex
+      width: 100%
+      &:hover
+        box-shadow: 0 0 22px rgba(75, 163, 218, 0.15), 0 1px 40px rgba(0, 0, 0, 0.1)
+      &-content
+        padding: 15px 24px
+        flex: 1
+      &-image
+        width: 45%
+        flex: 45% 0 0
+        border-radius: 0 4px 4px 0
+        &:after
+          padding-bottom: 105.5%
+      &-title
+        font-size: 24px
+
+
+    &__list
+      margin: 0 0 24px
+      .swiper-container
+        overflow: unset
+      .swiper-wrapper
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: 1fr 1fr
+        padding: 0
+      .swiper-slide
+        display: flex
+        margin: 0
+        padding: 0
+      &-more
+        display: block

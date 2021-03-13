@@ -1,0 +1,136 @@
+.blogSections
+  padding-top: 15px
+  padding-bottom: 40px
+  overflow: hidden
+  &__filter
+    display: flex
+    min-width: 100%
+    font-size: 20px
+    font-weight: 600
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    line-height: 1
+    border-bottom: 2px solid #E0E0E0
+    &-holder
+      display: flex
+      justify-content: space-between
+      padding-right: 12px
+      margin-left: 12px
+      margin-right: 12px
+      min-width: 100%
+    &-wrapper
+      overflow: auto
+      margin-bottom: 9px
+      padding-bottom: 5px
+      display: flex
+      justify-content: space-between
+      margin-left: -12px
+      margin-right: -12px
+
+    &-item
+      color: $darkGray
+      position: relative
+      margin-right: 16px
+      padding-bottom: 12px
+      margin-bottom: -2px
+      z-index: 2
+      white-space: nowrap
+      cursor: pointer
+      &:after
+        content: ''
+        display: block
+        height: 2px
+        position: absolute
+        border-radius: 1px
+        bottom: 0
+        left: 0
+        right: 0
+      &:last-of-type
+        margin-right: 0
+
+
+      &.js-active
+        color: $accentPink
+        &:after
+          background: $accentPink
+
+  &__more
+    text-align: center
+    font-weight: bold
+
+  .blogListItem
+    width: auto
+    background: none
+    box-shadow: none
+    margin-bottom: 7px
+    color: #000
+    transition: box-shadow .3s ease, backgroud .3s ease
+    border-radius: 4px
+    &[hidden]
+      display: none
+    &:hover
+      color: $accentBlue
+      background: #FFF
+      box-shadow: 0 0 22px rgba(75, 163, 218, 0.15), 0 1px 40px rgba(0, 0, 0, 0.1)
+      .blogListItem
+        &__title
+          transform: translateX(22px)
+          &:before
+            opacity: 1
+    &__image
+      height: 154px
+      border-radius: 4px
+      overflow: hidden
+    &__content
+      padding: 17px 0 10px
+    &__title
+      font-size: 16px
+      line-height: 125%
+      font-family: "SF Pro Text", Arial, sans-serif
+      transition: color .3s ease,  transform .3s ease
+      padding-right: 22px
+      position: relative
+      &:before
+        content: ''
+        display: inline-block
+        padding: 0
+        opacity: 0
+        position: absolute
+        left: -12px
+        top: 2px
+        line-height: 1
+        font-size: 0
+        transition: opacity .3s ease
+
+    &__time
+      &-icon
+        margin-top: -2px
+
+  @include mq($from: tablet)
+
+    &__filter
+      &-wrapper
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 12px
+      &-holder
+        margin: 0
+        padding-right: 0
+
+    .blogList
+      display: flex
+      flex-wrap: wrap
+      margin-right: -30px
+      margin-bottom: 24px
+    .blogListItem
+      flex: calc(50% - 30px) 0 0
+      margin-right: 30px
+
+  @include mq($from: desktop)
+    padding-top: 44px
+    padding-bottom: 73px
+    &__filter
+      &-item
+        margin-right: 24px
+    .blogListItem
+      flex: calc(23% - 30px) 0 0
+      margin-right: 30px

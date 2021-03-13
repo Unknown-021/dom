@@ -1,0 +1,226 @@
+.connection
+  background: #F7F7F7
+  padding-top: 33px
+  &__caption
+    text-align: center
+  &__steps
+    position: relative
+    z-index: 0
+    padding-bottom: 54px
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: -12px
+      bottom: 0
+      left: -12px
+      background: #FFF
+      height: 174px
+      z-index: -1
+    &-item
+      margin-bottom: 0
+      position: relative
+      width: 270px
+      padding-left: 50px
+      margin-left: auto
+      margin-right: auto
+      &-number
+        font-size: 48px
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        font-weight: 600
+        position: absolute
+        color: #FFF
+        left: -6px
+        top: -10px
+        width: 40px
+        text-align: right
+      &-description
+        font-weight: 600
+        line-height: 125%
+        &_bold
+          font-weight: bold
+          color: $accentPink
+      &-image
+        margin-bottom: 9px
+        img
+          filter: drop-shadow(0 0 50px rgba(#000, .2))
+        &_large
+          display: none
+      &_first
+        .connection__steps-item
+          &-arrow
+            text-align: center
+            padding: 8px 20px 0 0
+      &_second
+        margin-bottom: -5px
+        .connection__steps-item
+          &-arrow
+            text-align: center
+            padding: 0 45px 0 0
+            margin-top: 0
+      &_third
+        margin-bottom: -5px
+        .connection__steps-item
+          &-arrow
+            text-align: center
+            padding: 0 45px 0 0
+            margin-top: -10px
+      &_third
+        margin-bottom: 16px
+        .connection__steps-item
+          &-arrow
+            text-align: center
+            padding: 0 45px 0 0
+            margin-top: -5px
+      &_fourth
+        margin-bottom: 40px
+        .connection__steps-item
+          &-image
+            padding-left: 38px
+            margin-top: -5px
+          &-arrow
+            margin: -60px 0 0 -70px
+            position: absolute
+
+      &_fifth
+        .connection__steps-item
+          &-image
+            margin: 0 0 19px -38px
+          &-description
+            width: 230px
+            margin-left: -28px
+          &-arrow
+            display: none
+
+  @include mq($from: desktop)
+    /*FAFBFC*/
+    background: #f2f2f2
+    padding-top: 70px
+    padding-bottom: 20px
+    position: relative
+    z-index: 1
+    &:before
+      content: ''
+      display: block
+      background: #FFF
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+      height: 98px
+      border-bottom: 2px solid #efefef
+      top: 283px
+      left: 0
+      right: 0
+      position: absolute
+      z-index: 2
+    &:after
+      content: ''
+      display: block
+      left: 0
+      bottom: 0
+      right: 0
+      top: 380px
+      background: #FFF
+      position: absolute
+      pointer-events: none
+      z-index: 0
+
+    &__caption
+      margin-bottom: 51px
+    &__steps
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      position: relative
+      z-index: 3
+      &:after
+        display: none
+      &-item
+        flex: 220px 0 0
+        height: 220px
+        width: auto
+        margin: 0
+        padding: 0
+        z-index: 1
+        position: relative
+        &:before,&:after
+          content: ''
+          position: absolute
+          display: block
+          border-top: 49px solid transparent
+          border-bottom: 49px solid transparent
+          border-left: 20px solid #FFF
+          right: 0
+          z-index: 2
+          top: 123px
+          margin-right: -30px
+        &:after
+          border-left: 20px solid #efefef
+          right: -2px
+          z-index: 1
+
+        &-image
+          height: 130px
+          display: flex
+          align-items: center
+          margin: 0 0 12px !important
+          padding: 0 !important
+          img
+            display: none
+            filter: none
+          &_large
+            display: block !important
+        &-arrow
+          display: none
+        &-description
+          width: 210px
+        &-number
+          font-size: 96px
+          z-index: 2
+          text-shadow: 0px 1px 24px rgba(0, 0, 0, 0.05), 0px 1px 25px rgba(0, 0, 0, 0.1)
+          left: auto
+          right: 5px
+          top: -30px
+
+        &_second
+          .connection__steps-item
+            &-image
+              padding-left: 22px
+            &-number
+              right: 15px
+        &_third
+          .connection__steps-item
+            &-number
+              right: 30px
+        &_fourth
+          .connection__steps-item
+            &-image
+              img
+                margin-left: auto
+                margin-right: auto
+            &-number
+              right: 30px
+          &:after,&:before
+            display: none
+
+        &_fifth
+          flex: 100% 0 0
+          height: auto
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          padding-top: 50px
+          padding-right: 100px
+          .connection__steps-item
+            &-image
+              height: auto
+              margin-bottom: 28px !important
+            &-description
+              padding-left: 60px
+              width: 290px
+            &-arrow
+              display: block
+              position: absolute
+              left: calc(50% + 180px)
+              top: 15px
+          &:after,&:before
+            display: none

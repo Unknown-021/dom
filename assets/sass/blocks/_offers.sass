@@ -1,0 +1,249 @@
+.offers
+  &__searchAddress
+    background: $primaryBlue
+    color: #FFF
+    text-align: center
+    padding-top: 13px
+    padding-bottom: 23px
+    line-height: 130%
+
+    .link
+      color: #FFF
+    &-text
+      font-family: Montserrat, Arial, Verdana, sans-serif
+    &-button
+      padding-top: 12px
+    &-results
+      font-weight: 600
+      text-align: center
+      line-height: 120%
+      font-size: 20px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      padding: 24px 12px 11px
+  &__sorter
+    text-align: center
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    background: #FFF
+    padding-top: 8px
+    padding-bottom: 8px
+    margin-bottom: 8px
+    .link
+      &:hover
+        .link__icon
+
+  &__container
+    padding-left: 8px
+    padding-right: 8px
+  &__controls
+    position: sticky
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 12px
+    padding-bottom: 0
+    z-index: 20
+    display: flex
+    justify-content: center
+    .btn
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 0
+      flex: 1
+      max-width: 170px
+      color: $darkGray
+      text-transform: uppercase
+      font-size: 12px
+      letter-spacing: 1px
+      font-weight: bold
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+      &-compare
+        border-radius: 4px 0 0 4px
+        &__count
+          color: #FFF
+          background: $accentPink
+          height: 16px
+          min-width: 16px
+          border-radius: 8px
+          text-align: center
+          padding-left: 6px
+          padding-right: 4px
+          display: inline-flex
+          align-items: center
+          line-height: 1
+          margin-left: 5px
+      &-filters
+        border-radius: 0 4px 4px 0
+
+      [class*="svg-image"]
+        margin-right: 5px
+      &.is-active
+
+    &_desktop
+      display: none
+
+  &__added
+    background: #FFF
+    box-shadow: 0 0 22px rgba(75, 163, 218, 0.15), 0 1px 40px rgba(0, 0, 0, 0.1)
+    position: fixed
+    padding-top: 12px
+    padding-bottom: 12px
+    top: 0
+    right: 0
+    left: 0
+    z-index: 80
+    pointer-events: none
+    opacity: 0
+    transition: opacity .3s ease
+    &-flex
+      display: flex
+      align-items: center
+    &-logo
+      border-right: 1px solid #EDEDED
+      flex: 53px 0 0
+      max-width: 53px
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        display: block
+        max-width: 40px
+    &-content
+      padding-left: 8px
+      padding-top: 5px
+      padding-bottom: 5px
+
+    &-text
+      font-weight: 600
+      margin-bottom: 4px
+    &-notice
+      font-size: 14px
+      color: $middleGray
+    &-close
+      cursor: pointer
+      margin-left: auto
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      opacity: .5
+    &-button
+      display: none
+      margin-left: 38px
+    &.is-active
+      pointer-events: auto
+      opacity: 1
+
+  @include mq($from: desktop)
+    &__controls
+      display: none
+      &_desktop
+        display: block
+        position: sticky
+        right: 0
+        bottom: 0
+        z-index: 20
+        text-align: right
+        .btn-compare
+          background: $primaryBlue
+          color: #FFF
+          padding-left: 17px
+          padding-right: 17px
+          height: 36px
+          border-radius: 4px 4px 0 0
+          box-shadow: 0 1px 25px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1)
+          border: none
+          font-size: 14px
+          .svg-image-compare-white
+            margin-right: 5px
+          .svg-image-arrow-right
+            margin-left: 5px
+
+    &__holder
+      display: flex
+      max-width: 1140px
+      margin-left: auto
+      margin-right: auto
+    &__sidebar
+      flex: 280px 0 0
+    &__container
+      padding-left: 0
+      padding-right: 50px
+    &__content
+      flex: 1
+      max-width: 100%
+
+    &__searchAddress
+      display: flex
+      padding-top: 15px
+      padding-bottom: 16px
+      margin-bottom: 10px
+      &-container
+        margin-left: auto
+        margin-right: auto
+        max-width: 1140px
+        flex: 1
+        display: flex
+      &-wrapper
+        display: flex
+        margin-left: auto
+        max-width: 850px
+        flex: calc(100% - 300px) 0 0
+      &-text
+        font-size: 20px
+        text-align: left
+        line-height: 120%
+        font-weight: 300
+        b
+          font-weight: 600
+      &-button
+        border-left: 1px solid rgba(#FFF, .2)
+        padding-left: 30px
+        font-weight: 600
+        margin-left: 30px
+
+    &__searchAddress-results
+      padding: 15px 0 0
+      text-align: left
+      font-size: 24px
+      margin-bottom: 8px
+    &__sorter
+      background: none
+      padding: 0
+      float: right
+      box-shadow: none
+      margin-right: 12px
+      position: relative
+      z-index: 2
+      margin-bottom: 0
+      .link__dropdown-content
+        left: auto
+        right: -12px
+    &__added
+      box-shadow: 0 0 22px rgba(75, 163, 218, 0.15), 0 1px 40px rgba(0, 0, 0, 0.1)
+      &-button
+        display: inline-flex
+      &-container
+        max-width: 1140px
+        margin-left: auto
+        margin-right: auto
+      &-logo
+        flex: 300px 0 0
+        max-width: 300px
+        img
+          margin-left: auto
+          max-width: 100%
+      &-close
+        position: absolute
+        right: 10px
+
+  @include mq($from: wide)
+    &__sidebar
+      flex: 300px 0 0
+      max-width: 300px
+      padding-right: 20px
+      padding-bottom: 40px
+    &__container
+      padding-right: 15px

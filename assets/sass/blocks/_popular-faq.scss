@@ -1,0 +1,88 @@
+.popularFaq {
+  padding-top: 16px;
+  padding-bottom: 30px;
+
+  &__caption {
+    margin-bottom: 16px;
+
+    h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid #f3f3f3;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &-toggler {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 12px;
+      padding-right: 8px;
+      min-height: 48px;
+      cursor: pointer;
+      background-color: #F7F7F7;
+      border: 2px solid #FFFFFF;
+      border-radius: 4px;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #ffffff;
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      max-width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid #E0E0E0;
+      background-color: #FFFFFF;
+      text-align: center;
+      flex: 1 0 auto
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-content {
+      overflow: hidden;
+      background-color: #fff;
+      padding: 0 14px;
+
+      p {
+        margin: 0 0 1em;
+      }
+    }
+  }
+
+  @include mq($from: desktop) {
+    padding-top: 65px;
+    padding-bottom: 69px;
+    background: #FFF;
+
+    &__caption {
+      margin-bottom: 40px;
+
+      h3 {
+        font-size: 32px;
+        text-align: center;
+      }
+    }
+
+    /* .container {
+      width: 540px;
+      margin: 0 auto;
+      padding: 0;
+    } */
+  }
+}

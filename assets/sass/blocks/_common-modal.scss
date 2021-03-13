@@ -1,0 +1,126 @@
+.common {
+  &__modal {
+    background-color: #ffffff;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    border-radius: 10px 10px 0px 0px;
+
+    @include mq($from: desktop) {
+      max-width: 600px;
+      margin-top: 0;
+      border-radius: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 5px;
+      width: 36px;
+      background-color: #C7C7CC;
+      border-radius: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 12px;
+
+      @include mq($from: desktop) {
+        display: none;
+      }
+    }
+
+    &-close {
+      position: absolute;
+      content: '';
+      border: none;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.55555 8L15 2.55556L13.4444 1L8 6.44444L2.55558 1.00002L1.00002 2.55558L6.44444 8L1 13.4444L2.55556 15L8 9.55555L13.4445 15L15 13.4445L9.55555 8Z' fill='%23808080'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 44px;
+      height: 44px;
+      top: -56px;
+      right: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      @include mq($from: desktop) {
+        top: 0;
+        right: 0;
+        border-radius: 0
+      }
+    }
+
+    &-top {
+      padding-top: 33px;
+      padding-bottom: 24px;
+      padding-right: 16px;
+      padding-left: 16px;
+      box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.05);
+
+      @include mq($from: desktop) {
+        padding: 50px 125px;
+        box-shadow: none;
+        text-align: center;
+      }
+    }
+
+    &-title {
+      font-weight: 900;
+      font-size: 27px;
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
+
+    &-bottom {
+      padding: 16px;
+      padding-top: 24px;
+
+      @include mq($from: desktop) {
+        padding: 54px;
+        padding-top: 16px;
+      }
+
+      &-form {
+        .btn {
+          width: 100%;
+          margin-top: 26px;
+          justify-content: center;
+        }
+      }
+    }
+
+    &-select-wrap {
+      display: flex;
+      margin-top: 24px;
+
+      .inputSelect {
+        width: 50%;
+
+        &:first-child {
+          margin-right: 8px;
+        }
+
+        &:last-child {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    &-success {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 11;
+
+      img {
+        width: 80px;
+      }
+    }
+  }
+}

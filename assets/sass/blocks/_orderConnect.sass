@@ -1,0 +1,61 @@
+.orderConnect
+  background: #FFF
+  margin-bottom: 16px
+  padding: 24px 16px 16px
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  position: sticky
+  top: 10px
+  .popup &
+    margin: -12px
+  &__caption
+    font-size: 20px
+    font-weight: 600
+    margin-bottom: 12px
+  &__row
+    margin-bottom: 12px
+    &_flex
+      display: flex
+      justify-content: space-between
+      .inputPlaceholder
+        flex: calc(50% - 4px) 0 0
+  &__text
+    font-weight: 600
+    line-height: 125%
+    margin-bottom: 16px
+    + .inputSelect__row
+      margin-top: -4px
+
+  .btn-submit
+    display: flex
+    justify-content: center
+    height: 56px
+    margin-bottom: 18px
+    &:last-child
+      margin-bottom: 0
+  &__terms
+    font-size: 10px
+    line-height: 120%
+    color: $darkGray
+    text-align: center
+  .inputSelect
+    flex: calc(50% - 4px) 0 0
+    &__row
+      display: flex
+      justify-content: space-between
+      margin-bottom: 12px
+  &__success
+    display: flex
+    align-items: center
+    color: $accentPink
+    justify-content: center
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    border-radius: 10px 10px 0 0
+    margin: -24px -16px 17px
+    padding: 35px 24px 26px
+    line-height: 125%
+    &-icon
+      margin-right: 8px
+    &-text
+      font-weight: 600
+      max-width: 160px

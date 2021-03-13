@@ -1,0 +1,205 @@
+.bestOffers
+  .container
+    padding-left: 0
+    padding-right: 0
+  &__caption
+    text-align: center
+    padding-top: 33px
+    padding-bottom: 10px
+    color: #FFF
+    min-height: 332px
+    position: relative
+    background: url("../images/bg-best-offers.jpg") 50% 0 no-repeat
+    background-size: cover
+    margin-bottom: -126px
+    h2
+      margin-bottom: 13px
+    &-notice
+      line-height: 125%
+      padding-left: 20px
+      padding-right: 20px
+      min-height: 80px
+      max-width: 650px
+      margin-left: auto
+      margin-right: auto
+    *
+      position: relative
+      z-index: 2
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba($primaryBlue, .8)
+
+  &__list
+    position: relative
+    max-width: 1038px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 51px
+    &-heading
+      text-align: center
+      font-size: 20px
+      font-weight: 600
+      position: relative
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      margin-bottom: 12px
+      &_white
+        color: #FFF
+    .swiper-slide
+      width: 330px
+      &.swiper-slide-visible
+        box-shadow: 0 1px 18px rgba(0, 0, 0, 0.05)
+    .swiper-button
+      display: none
+    .slick-track
+      display: flex !important
+    .slick-slide
+      height: inherit !important
+    .slick-slide>div
+      height: 100%
+    .slick-slide>div>div
+      height: 100%
+      padding: 25px 8px
+    .card__wrapper
+      margin: 0 !important
+      height: 100%
+
+  @include mq($from: tablet)
+    &__caption
+      padding-top: 75px
+      background: url("../images/bg-best-offers-1024.webp") 50% 0 no-repeat
+      background-size: cover
+      min-height: 425px
+
+  @include mq($from: 1140px)
+    &__list
+      .swiper-button
+        display: flex
+
+  @include mq($from: desktop)
+    &__caption
+      padding-top: 73px
+      margin-bottom: -179px
+      h2
+        margin-bottom: 18px
+      &-notice
+        font-size: 16px
+        line-height: 165%
+    &__list
+      margin-bottom: 61px
+      &:last-of-type
+        margin-bottom: 20px
+      &-heading
+        font-size: 24px
+        margin-bottom: 13px
+
+.offerItem
+  background: #FFF
+  border-radius: 4px
+  max-width: 330px
+  padding: 16px
+  margin: 0 8px
+  overflow: hidden
+
+  &__heading
+    display: flex
+    align-items: flex-start
+    margin-bottom: 25px
+    &-icon
+      margin-right: 12px
+      min-width: 54px
+      img
+        width: 54px
+        border-radius: 4px
+        display: block
+    &-title
+      font-size: 24px
+      font-weight: 600
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      line-height: 1.22
+      margin-top: -4px
+
+  &__positions
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: -4px
+
+  &__position
+    flex: 50% 0 0
+    margin-bottom: 17px
+    &-icon
+      margin-bottom: 3px
+    &-volume
+      display: flex
+      align-items: flex-end
+      margin-bottom: 2px
+      &-value
+        font-weight: 600
+        font-size: 32px
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        margin-right: 5px
+        line-height: 1
+      &-title
+        font-size: 20px
+        letter-spacing: -.05em
+
+    &-description
+      font-size: 14px
+      line-height: 115%
+      padding-top: 2px
+      margin-bottom: 2px
+      [class*="svg-image"]
+        vertical-align: bottom
+
+    &-notice
+      font-size: 14px
+      color: $darkGray
+
+    [class*="svg-image"]
+      display: inline-block
+  &__description
+    border-top: 1px solid #e0e0e0
+    padding-top: 12px
+    padding-bottom: 16px
+    ul
+      padding: 0
+      margin: 0
+      font-size: 14px
+      line-height: 115%
+      list-style: none
+      li
+        padding-left: 22px
+        position: relative
+        margin-bottom: 8px
+        &:before
+          content: '—'
+          position: absolute
+          left: 0
+  &__cost
+    display: flex
+    align-items: center
+    &-value
+      font-size: 48px
+      font-weight: 600
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      line-height: 1
+      margin-right: 5px
+    &-period
+      span
+        display: block
+        border-top: 1px solid #000
+
+  &__footer
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    margin: 0 -16px -16px
+    padding: 16px
+    display: flex
+    justify-content: space-between
+    .btn-more
+      padding-left: 30px
+      padding-right: 30px

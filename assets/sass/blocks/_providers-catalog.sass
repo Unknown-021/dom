@@ -1,0 +1,74 @@
+.providersCatalog
+  background: #FFF
+  padding-top: 31px
+  padding-bottom: 32px
+
+  &__caption
+    text-align: center
+    margin-bottom: 26px
+
+  &__item
+    margin-bottom: 20px
+    text-align: center
+    font-weight: 600
+    .link
+      color: $middleGray
+    &:hover
+      .link
+        color: $accentBlue
+        &__icon
+      .svg-image-arrow-right-gray
+        width: 9px
+        height: 12px
+        background-repeat: no-repeat
+        background-position: center
+        background-image: url('~assets/images/sprite-svg/arrow-right.svg')
+
+    &-logo
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 80px
+    &:not(:last-of-type)
+      &:after
+        content: ''
+        display: block
+        height: 1px
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #E0E0E0 50%, rgba(255, 255, 255, 0) 100%)
+        width: 200px
+        margin: 57px auto 30px
+
+  &__list
+    &-more
+      text-align: center
+      font-weight: 600
+
+  @include mq($from: tablet)
+    &__list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      max-width: 1030px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 10px
+    &__item
+      flex: calc(50% - 20px) 0 0
+      margin-bottom: 76px
+      &:nth-child(n)
+        &:after
+          display: none
+
+  @include mq($from: desktop)
+    padding-top: 142px
+    padding-bottom: 74px
+    &__item
+      flex: calc(33.33% - 20px) 0 0
+      &:nth-child(n)
+        &:after
+          display: none
+    &__caption
+      margin-bottom: 84px
+      br
+        display: none

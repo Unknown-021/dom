@@ -1,0 +1,133 @@
+.footer
+  p
+    margin: 0 0 1em
+  &__wrapper
+    background: #FFF
+    padding-top: 25px
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+    position: relative
+
+  &__logo
+    margin-bottom: 41px
+  .logo
+    width: 230px
+    height: 66px
+    margin: 0 auto
+    display: block
+
+  &__nav
+    padding-left: 4px
+    padding-right: 4px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &-block
+      flex: 50% 0 0
+      &_callback
+        display: flex
+        justify-content: center
+        border-top: 1px solid #E0E0E0
+        padding-top: 18px
+        padding-bottom: 25px
+        flex: 100% 0 0
+      &_second
+        width: calc(50% - 50px)
+        flex: calc(50% - 50px) 0 0
+      &_last
+        flex: 100% 0 0
+        display: flex
+        margin-top: 12px
+        justify-content: space-between
+        margin-bottom: 15px
+        .footer__nav-item
+          width: calc(50% - 50px)
+          flex: calc(50% - 50px) 0 0
+    &-item
+      margin-bottom: 10px
+      a
+        cursor: pointer
+      &_bold
+        font-weight: bold
+    &-section
+      margin-top: 23px
+
+  &__copyright
+    background: #f7f7f7
+    font-size: 12px
+    line-height: 100%
+    text-align: center
+    padding: 25px 15px
+    color: $middleGray
+
+    &-caption
+      letter-spacing: 1px
+      margin-bottom: 12px
+  &__callback
+    display: inline-block
+    &-link
+      display: block
+      font-weight: 600
+      margin-bottom: 6px
+
+    &-tel
+      font-size: 32px
+      font-weight: bold
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      display: block
+
+  @include mq($from: desktop)
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    &__wrapper
+      max-width: 100%
+      padding-bottom: 44px
+    &__container
+      max-width: 1140px
+      padding-left: 15px
+      padding-right: 15px
+      margin-left: auto
+      margin-right: auto
+      display: flex
+      align-items: flex-start
+      padding-top: 15px
+    .logo
+      width: 160px
+      height: 46px
+      margin: 0
+    &__logo
+      flex: 20% 0 0
+    &__nav
+      flex: 1
+      justify-content: space-between
+      align-items: flex-start
+      padding: 0
+      flex-wrap: nowrap
+      &-block
+        flex: 1
+        width: auto
+        &_callback
+          margin: 0
+          padding: 0
+          border: none
+          text-align: right
+          display: block
+          .footer__callback
+            text-align: left
+            white-space: nowrap
+        &_first
+          flex: 24.5% 0 0
+        &_second
+          flex: 19.5% 0 0
+
+        &_last
+          display: block
+          margin: 0
+          .footer__nav-item
+            width: auto
+            margin-bottom: 22px
+
+      &-section
+        margin-top: 30px
+    &__copyright
+      .container
+        max-width: 630px

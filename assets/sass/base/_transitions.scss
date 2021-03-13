@@ -1,0 +1,31 @@
+.slick-list {
+  transition: height .3s linear;
+}
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: all .2s linear;
+  }
+  &-enter, &-leave-to {
+    opacity: 0 !important;
+  }
+}
+.expand {
+  &-enter-active,
+  &-leave-active {
+    overflow: hidden;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    max-height: 0px;
+    transition: max-height .3s linear;
+    will-change: max-height;
+    transform: translateZ(0);
+  }
+  &-enter, &-leave-to {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .3s linear;
+    will-change: max-height;
+    transform: translateZ(0);
+  }
+}

@@ -1,0 +1,115 @@
+.errorPage
+  .crumbs
+    display: none
+  &__content
+    text-align: center
+    padding-top: 35px
+    padding-bottom: 50px
+    &_nothing
+      .errorPage
+        &__content
+          &-caption
+            margin-bottom: 40px
+            h1
+              font-size: 20px
+              line-height: 120%
+          &-notice
+            font-weight: 600
+            line-height: 125%
+            margin-bottom: 20px
+          &-reasons
+            margin-bottom: 17px
+          &-reason
+            margin-bottom: 40px
+            &-image
+              height: 100px
+              display: flex
+              align-items: center
+              justify-content: center
+              margin-bottom: 5px
+    &-icon
+      position: relative
+      padding-top: 65px
+      margin-bottom: 22px
+      &-text
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        font-weight: 600
+        font-size: 96px
+        color: #FFF
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        line-height: 1
+    &_404
+      .errorPage__content
+        &-notice
+          max-width: 330px
+          margin-left: auto
+          margin-right: auto
+          font-weight: 600
+          margin-bottom: 25px
+
+    &_500
+      padding-bottom: 12px
+      .errorPage__content
+        &-notice
+          max-width: 320px
+          margin-left: auto
+          margin-right: auto
+          font-weight: 600
+          margin-bottom: 25px
+          line-height: 125%
+        &-icon
+          padding-top: 0
+          margin-bottom: 55px
+          &-text
+            bottom: -40px
+            top: auto
+
+
+
+
+  @include mq($from: tablet)
+    .crumbs
+      display: block
+    &__content
+      padding-top: 34px
+      &_nothing
+        .errorPage
+          &__content
+            &-caption
+              margin-bottom: 27px
+              h1
+                font-size: 32px
+                font-weight: bold
+                font-family: Montserrat, Arial, Verdana, sans-serif
+                max-width: 580px
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 0
+            &-notice
+              margin-bottom: 40px
+
+            &-reasons
+              display: flex
+              justify-content: center
+            &-reason
+              margin-left: 30px
+              margin-right: 30px
+              flex: 180px 0 0
+      &_404
+        padding-top: 50px
+        padding-bottom: 85px
+
+      &_500
+        padding-top: 64px
+        padding-bottom: 58px
+        .errorPage__content
+          &-notice
+            max-width: 376px
+          &-icon
+            padding-top: 0
+            margin-bottom: 60px
+            &-text
+              bottom: -48px

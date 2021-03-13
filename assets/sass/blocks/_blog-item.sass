@@ -1,0 +1,331 @@
+figure
+  text-align: center
+  img
+    max-width: 100%
+  figcaption
+    background: #f7f7f7
+    padding: 5px
+    border-radius: 5px
+figure.image-style-side
+  float: right
+  margin: 0 15px 10px 15px
+  max-width: 50%
+.blogItem
+
+  .crumbs
+    display: none
+    background: #FFF
+  &__header
+    position: relative
+    &-image
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      height: 216px
+      img
+        position: absolute
+        object-fit: cover
+        width: 100%
+        height: 100%
+    &-title
+      position: relative
+      z-index: 2
+      color: #FFF
+      padding: 16px 14px
+      h1
+        line-height: 1.22
+        margin: 0
+
+  &__content
+    position: relative
+    z-index: 2
+    margin-left: -4px
+    margin-right: -4px
+
+    &-image
+      display: flex
+      justify-content: center
+      padding: 20px 18px
+
+      img
+        display: block
+        max-width: calc(100% + 36px)
+        margin: -20px -18px 23px
+
+    &-block
+      background: #FFF
+      border: 2px solid #FFF
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+      border-radius: 4px
+      overflow: hidden
+
+      margin-bottom: 14px
+      line-height: 125%
+      min-height: 100%
+
+      .article
+        .text
+          padding: 20px 18px
+
+    &-offers
+      margin-left: -8px
+      margin-right: -8px
+      margin-bottom: 22px
+      .bestOffers__list
+        margin-bottom: 0
+
+    .swiper-wrapper
+      padding-left: 8px
+      padding-right: 8px
+    h2
+      font-size: 20px
+      font-weight: 600
+      line-height: 120%
+      margin-bottom: 1.25em
+    p
+      margin-top: 0
+      margin-bottom: 1.75em
+
+      &:last-of-type
+        margin-bottom: 0
+    .link-compare
+      font-size: 14px
+  &__date
+    color: $middleGray
+    display: flex
+    align-items: center
+    font-size: 14px
+    padding: 0px 18px
+    margin-bottom: 9px
+    [class*="svg-image"]
+      margin-right: 5px
+  &__sidebar
+    .appeal
+      margin-left: -4px
+      margin-right: -4px
+    .useful__item
+      margin-left: -4px
+      margin-right: -4px
+    .blogListItem
+      margin-left: -4px
+      margin-right: -4px
+      margin-bottom: 16px
+      width: auto
+      max-width: none
+    .subscribeNews
+      margin-left: -4px
+      margin-right: -4px
+    .reminder
+      margin-left: -4px
+      margin-right: -4px
+  &__articles-block
+    padding: 24px 54px;
+    .title
+      font-size: 25px
+      font-weight: 600
+      color: grey
+  @include mq($from: tablet)
+    &__sidebar
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      position: relative
+      .appeal, .useful__item, .blogListItem, .subscribeNews, .reminder
+        flex: calc(50% - 4px) 0 0
+      .useful__item
+        margin-bottom: 16px
+
+  @include mq($from: desktop)
+    background: #F3F3F3
+    .crumbs
+      display: flex
+    &__container
+      display: flex
+      justify-content: space-between
+      padding-bottom: 16px
+    &__sidebar
+      display: block
+      flex: 269px 0 0
+      width: 269px
+      max-width: 269px
+      .appeal, .useful__item,.blogListItem,.subscribeNews,.reminder
+        margin-left: 0
+        margin-right: 0
+      .appeal
+        &__caption
+          align-items: flex-start
+          padding-right: 16px
+          &-icon
+            width: 50px
+            flex: 40px 0 0
+        &__content
+          padding-top: 25px
+          &-notice
+            margin-bottom: 12px
+        &__form
+          &-row
+            margin-bottom: 12px
+        .btn-submit
+          height: 64px
+
+      .useful__item
+        display: block
+        &-image
+          position: static
+          margin: -16px
+
+      .subscribeNews
+        padding-top: 25px
+        &__caption
+          margin-bottom: 16px
+        &__form
+          &-row
+            margin-bottom: 16px
+        .btn-submit
+          height: 48px
+          margin-bottom: 16px
+
+      .reminder
+        padding-top: 23px
+        padding-bottom: 24px
+        &__notice
+          margin-bottom: 24px
+        .btn-submit
+          height: 48px
+
+    &__content
+      flex: calc(100% - 269px - 16px) 0 0
+      // max-width: calc(100% - 269px - 16px)
+      margin: 0 auto
+      overflow: hidden
+      border-radius: 4px
+      border-left: 1px solid #FFF
+      border-right: 1px solid #FFF
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+      &-block
+        border: none
+
+        .article
+          .text
+            padding: 24px 54px
+
+            border-radius: 0
+            box-shadow: none
+        &:last-of-type
+          margin-bottom: 0
+      &-offers
+        max-width: 690px
+        margin-left: auto
+        margin-right: auto
+      &-image
+        padding: 24px 54px
+        margin-left: -30px
+        margin-right: -30px
+        img
+          margin: 0 0 22px
+          max-width: 100%
+      h2
+        margin-bottom: 1.5em
+    &__date
+      padding: 0px 54px
+    &__header
+      &-image
+        height: 370px
+      &-title
+        padding: 40px 140px 25px
+      h1
+        font-size: 32px
+        font-weight: bold
+
+.appeal
+  background: #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  margin-bottom: 16px
+  &__caption
+    display: flex
+    padding: 24px 24px 24px 12px
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    align-items: center
+    &-icon
+      flex: 50px 0 0
+      width: 50px
+      padding-right: 8px
+      padding-top: 3px
+      display: flex
+      justify-content: center
+    &-title
+      font-weight: 600
+      font-size: 16px
+      line-height: 125%
+  &__content
+    padding: 16px
+    &-notice
+      font-size: 14px
+      margin: 0 0 10px
+
+  &__form
+    &-row
+      margin-bottom: 16px
+      &_number
+        display: flex
+        justify-content: space-between
+        .inputPlaceholder
+          flex: calc(50% - 8px) 0 0
+  .btn-submit
+    display: flex
+    width: 100%
+    justify-content: center
+
+.subscribeNews
+  background: #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  padding: 23px 16px 22px
+  margin-bottom: 16px
+  &__caption
+    font-size: 20px
+    font-weight: 600
+    color: $darkGray
+    line-height: 120%
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 13px
+  &__form
+    &-row
+      margin-bottom: 14px
+  .btn-submit
+    height: 56px
+    display: flex
+    width: 100%
+    justify-content: center
+    margin-bottom: 11px
+  &__checkbox
+    font-size: 10px
+    line-height: 120%
+
+.reminder
+  background: #FFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  padding: 16px
+  text-align: center
+  margin-bottom: 16px
+  &__icon
+    display: flex
+    justify-content: center
+    margin-bottom: 11px
+  &__caption
+    line-height: 100%
+    font-weight: bold
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 12px
+  &__notice
+    font-size: 14px
+    line-height: 115%
+    margin-bottom: 23px
+  .btn-submit
+    display: flex
+    width: 100%
+    justify-content: center
+    height: 56px

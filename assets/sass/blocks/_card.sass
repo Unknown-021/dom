@@ -1,0 +1,584 @@
+.card
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+  border-radius: 4px
+  overflow: hidden
+  background: #FFF
+  margin-bottom: 20px
+  display: flex
+  position: relative
+  z-index: 1
+
+  &__info
+    display: flex
+    margin-bottom: 16px
+    &-logo
+      width: 80px
+      flex: 80px 0 0
+      margin-right: 16px
+      img
+        display: block
+        max-width: 100%
+    &-provider
+      font-size: 14px
+      color: $darkGray
+      margin-bottom: 2px
+    &-title
+      font-size: 24px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-weight: 600
+      margin-bottom: 10px
+    &-description
+      font-size: 14px
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+      li
+        display: flex
+        margin-bottom: 4px
+        &:before
+          content: "—"
+          display: inline-block
+          width: 18px
+
+
+  &__position
+    margin-bottom: 7px
+    padding-bottom: 4px
+    position: relative
+    &:after
+      content: ''
+      display: block
+      height: 1px
+      background: #E0E0E0
+      margin-left: 96px
+
+    &-data
+      background: #FAFAFA
+      padding: 8px
+      font-size: 14px
+      flex: 1
+      margin-left: 96px
+      color: $darkGray
+      //margin-top: 16px
+      &_flex
+        display: flex
+        .card__position-data-cell
+          flex: calc(33.33% - 10px) 0 0
+          max-width: 132px
+          margin-right: 20px
+      &_packages
+        color: #000
+      &-title
+        margin-bottom: 4px
+        &_bold
+          font-weight: 600
+      &-content
+        &_bold
+          font-weight: 600
+
+
+    &-row
+      margin-bottom: 15px
+      padding-left: 60px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      &:last-of-type
+        margin-bottom: 7px
+
+      &_mobile
+        .card__position-item
+          flex: none
+    &-item
+      display: flex
+      flex: calc(50% - 24px) 0 0
+      .svg-image-included
+        vertical-align: -2px
+
+    &-description
+      line-height: 1.3
+    &-icon
+      flex: 44px 0 0
+      min-width: 44px
+      padding-right: 10px
+      text-align: center
+    &-volume
+      display: flex
+      align-items: baseline
+      line-height: 1
+      &-value
+        font-size: 32px
+        font-family: Montserrat, Arial, Verdana, sans-serif
+        font-weight: 500
+        margin-right: 4px
+        .unlimited
+          font-size: 48px
+          line-height: .4
+    &-notice
+      color: $darkGray
+      line-height: 1
+      margin-top: 1px
+    &_info
+      display: flex
+      padding-left: 60px
+      flex-wrap: wrap
+      padding-bottom: 0
+      margin-bottom: 0
+      .card__position
+        &-content
+          background: #FAFAFA
+          padding: 8px
+          font-size: 14px
+          line-height: 129%
+          flex: 1
+          margin-left: -8px
+          //margin-top: -7px
+      &:after
+        flex: calc(100% - 36px) 0 0
+        margin-left: 36px
+
+
+
+  [class*="svg-image-"]
+    display: inline-block
+
+  &__content
+    flex: 1
+    padding: 16px
+
+  &__sidebar
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+    align-self: stretch
+    flex: 255px 0 0
+    padding: 16px 16px 8px
+    display: flex
+    flex-direction: column
+
+  &__cost
+    border-bottom: 1px solid #E0E0E0
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    line-height: 1
+    margin: -3px 0 17px 0
+    padding-bottom: 3px
+
+    &-value
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-size: 48px
+      font-weight: 600
+      padding-right: 5px
+
+    &-period
+      display: flex
+      flex-direction: column
+      line-height: 1
+      span
+        border-top: 1px solid #000
+        display: block
+        margin-top: 2px
+
+  &__features
+    font-size: 14px
+    line-height: 114%
+    margin-bottom: auto
+  &__feature
+    margin-bottom: 10px
+    .accent
+      color: $primaryBlue
+
+  &__properties
+    font-size: 14px
+    line-height: 114%
+    margin-top: auto
+    margin-bottom: 10px
+
+  &__property
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 21px
+    &-cost
+      display: flex
+      align-items: center
+      margin-bottom: -6px
+      &_empty
+        margin: 0
+      &-value
+        font-weight: 600
+        padding-right: 8px
+        font-size: 16px
+      &-period
+        display: flex
+        flex-direction: column
+        font-size: 12px
+        line-height: 1
+        min-width: 22px
+        span
+          display: block
+          border-top: 1px solid
+          margin-top: 2px
+    &-notice
+      color: $middleGray
+      margin-top: 1px
+
+  .btn-more
+    color: $accentPink
+    font-weight: bold
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 48px
+    cursor: pointer
+    [class*="svg-image-arrow"]
+      margin-left: 5px
+  .btn-submit
+    display: flex
+    justify-content: center
+    margin-bottom: 9px
+  &__holder
+    position: relative
+    width: 825px
+  &__label
+    margin-bottom: -7px
+    position: relative
+    z-index: 0
+    &-item
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+      border-radius: 4px
+      color: #FFF
+      display: inline-flex
+      align-items: flex-start
+      height: 38px
+      padding: 10px 12px 0
+      font-size: 12px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-weight: bold
+      letter-spacing: 1px
+      text-transform: uppercase
+      line-height: 1
+
+      &_novelty
+        background: $accentPink
+      &_sales
+        background: $accentBlue
+      &_choice
+        background: $primaryBlue
+
+  &__comparison
+    position: absolute
+    top: 0
+    left: calc(100% - 4px)
+    &-holder
+      position: relative
+    &-button
+      cursor: pointer
+      background: #F7F7F7
+      border: 2px solid #FFF
+      white-space: nowrap
+      display: inline-flex
+      align-items: center
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 25px rgba(0, 0, 0, 0.1)
+      border-radius: 4px 0 0 4px
+      writing-mode: tb-rl
+      transform: rotate(-180deg)
+      padding: 8px 10px 8px 7px
+      font-weight: 600
+      color: $accentBlue
+      font-size: 14px
+      img
+        transform: rotate(180deg)
+      &.is-active
+        color: $primaryBlue
+        .svg-image-to-compare
+
+  .is-hidden
+    display: none
+    overflow: hidden
+
+  @include mq($from: desktop)
+    width: 100%
+    &__holder
+      width: auto
+    &__sidebar
+      flex: 30% 0 0
+      max-width: 255px
+
+.cardItem
+  &_mobile
+    display: block
+    .unlimited
+      font-size: 36px;
+      line-height: 0.6;
+    .card
+      background: #FFF
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+      border-radius: 4px
+      margin-bottom: 12px
+      &__holder
+        width: auto
+
+      &__label
+        margin-bottom: -11px
+        &-item
+          height: 30px
+          padding: 8px 12px 0
+
+      &__info
+        align-items: center
+        width: calc(100% + 24px)
+        box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+        margin: -12px -12px 10px -12px
+        padding: 12px 12px 12px 8px
+        &-logo
+          flex: 40px 0 0
+          margin-right: 4px
+        &-title
+          font-size: 16px
+          font-weight: bold
+          line-height: 100%
+          margin: 0
+
+      &__content
+        padding: 12px
+        width: 100%
+
+      &__cost
+        margin: 0
+        padding: 0
+        border: none
+        &-value
+          font-size: 32px
+          font-weight: 600
+        &-period
+          font-size: 13px
+
+      &__position
+        &:after
+          margin-left: 40px
+        &-item
+          flex: 50% 0 0
+
+        &-row
+          padding: 0
+          &:last-of-type
+            margin-bottom: 9px
+          &_mobile
+            .card__position-item
+              flex: auto
+              &:first-of-type
+                padding-right: 15px
+
+        &:last-of-type
+          margin-bottom: 0
+          padding-bottom: 0
+          &:after
+            display: none
+
+          .card__position-row
+            margin-bottom: 0
+
+
+        &-icon
+          flex: 40px 0 0
+          min-width: 40px
+          font-size: 0
+          min-height: 34px
+          [class*="svg-image-"]
+            display: inline-block
+
+        &-volume
+          &-value
+            font-size: 24px
+        &-content
+          font-size: 14px
+
+  @include mq($from: desktop)
+    display: block
+
+.cardItemDetail
+  height: 100%
+  background: #FFF
+  display: flex
+  flex-direction: column
+  &__header
+    padding: 4px 0
+    display: flex
+    align-items: center
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+    &-logo
+      flex: 36px 0 0
+      min-width: 36px
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        display: block
+        max-width: 32px
+        max-height: 32px
+    &-back
+      flex: 32px 0 0
+      min-width: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      align-self: stretch
+      cursor: pointer
+    &-info
+      flex: 1
+      padding: 1px 0 0 1px
+
+    &-operator
+      font-size: 14px
+      color: $darkGray
+    &-title
+      font-weight: 600
+      line-height: 130%
+    &-compare
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      line-height: 1
+      font-size: 14px
+      font-weight: 600
+      color: $accentBlue
+      padding: 0 12px
+      width: 94px
+      height: 50px
+      border-left: 1px solid #EDEDED
+      cursor: pointer
+      transition: color .15s ease
+      &-text
+        white-space: nowrap
+        height: 14px
+        margin-top: 4px
+      &.is-active
+        font-size: 12px
+        color: $primaryBlue
+        .svg-image-to-compare
+
+  &__content
+    flex: 1
+    overflow: auto
+    overscroll-behavior: contain
+    padding: 17px 12px
+    [class*="svg-image"]
+      display: inline-block
+      vertical-align: middle
+  &__footer
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1)
+    padding: 6px 12px 12px
+    .btn-submit
+      height: 56px
+      display: flex
+      justify-content: center
+  &__cost
+    display: flex
+    align-items: center
+    margin-left: auto
+    &-value
+      font-size: 48px
+      font-weight: 600
+      line-height: 1
+      font-family: Montserrat, Arial, Verdana, sans-serif
+    &-period
+      font-size: 15px
+      padding-left: 4px
+      span
+        display: block
+        border-top: 1px solid #000
+        margin-top: 3px
+    &-item
+      display: flex
+      align-items: center
+      font-size: 14px
+      padding: 0 12px
+      margin-bottom: 12px
+      .count
+        color: $primaryBlue
+        display: inline-block
+        margin-left: 3px
+        margin-right: 3px
+
+  &__property
+    border-bottom: 1px solid #EDEDED
+    padding-bottom: 9px
+    margin-bottom: 16px
+    margin-left: 37px
+    position: relative
+    &:last-of-type
+      border-bottom: none
+      margin-bottom: 0
+    &-row
+      position: relative
+      display: flex
+      margin-bottom: 8px
+      &:last-of-type
+        margin-bottom: 0
+    &-name
+      flex: 1
+      line-height: 125%
+      padding-right: 12px
+      .count
+        display: inline-block
+        background: $accentBlue
+        color: #FFF
+        font-size: 12px
+        padding: 1px 2px
+        border-radius: 3px
+        font-weight: bold
+        line-height: 1
+
+    &-header
+      display: flex
+      margin-bottom: 7px
+      .link
+        margin-left: auto
+    &-icon
+      display: flex;
+      align-items: center;
+      position: absolute
+      left: -36px
+      width: 36px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      top: -7px
+      padding: 0 15px 0 0
+    &-title
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      font-weight: bold
+
+    &-value
+      font-weight: 600
+      text-align: right
+    &-notice
+      font-size: 14px
+      font-weight: normal
+      color: $darkGray
+    &-currency
+      width: 64px
+      margin-left: 10px
+      display: inline-block
+      font-weight: normal
+      text-align: left
+
+  &__description
+    padding: 0
+    margin: 0 0 0 -20px
+    list-style: none
+    li
+      display: flex
+      line-height: 130%
+      margin-bottom: 4px
+      &:before
+        content: '—'
+        display: inline-block
+        margin-right: 3px
+        width: 20px

@@ -1,0 +1,62 @@
+.subscribe
+  padding-bottom: 20px
+  &__caption
+    background: $primaryBlue
+    color: #FFF
+    text-align: center
+    padding-top: 32px
+    padding-bottom: 54px
+    margin-bottom: -30px
+    h2
+      margin-bottom: 12px
+    &-notice
+      font-weight: 600
+      line-height: 125%
+      max-width: 487px
+      margin-left: auto
+      margin-right: auto
+  &__form
+    border-radius: 4px
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    padding: 16px
+    max-width: 730px
+    margin-left: auto
+    margin-right: auto
+    &-icon
+      display: none
+    &-input
+      margin-bottom: 16px
+    .btn-submit
+      display: flex
+      width: 100%
+      justify-content: center
+    &_fully
+      max-width: 920px
+  @include mq($from: tablet)
+    &__form
+      display: flex
+      padding: 27px 24px
+      align-items: center
+      &-icon
+        display: flex
+        padding-right: 24px
+      &-button
+        flex: 1
+        max-width: 216px
+      &-input
+        flex: 1
+        padding-right: 44px
+        margin: 0
+      &_fully
+        padding-top: 30px
+        padding-bottom: 30px
+
+  @include mq($from: desktop)
+    padding-bottom: 30px
+    &__caption
+      padding-top: 41px
+      h2
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 17px

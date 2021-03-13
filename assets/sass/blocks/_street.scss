@@ -1,0 +1,375 @@
+.street {
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px;
+
+    @include mq($from: desktop) {
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 59px;
+      margin-bottom: 32px;
+      max-width: 980px;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 16px;
+
+    @include mq($from: desktop) {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  /* ******************** HOUSE NUMBER **************** */
+  &__house-number {
+    background-color: #1E4E9D;
+    color: #ffffff;
+    padding-top: 32px;
+    padding-bottom: 16px;
+
+    @include mq($from: desktop) {
+      padding-top: 164px;
+      padding-bottom: 94px;
+    }
+
+    &-description {
+      margin: 0;
+      margin-bottom: 24px;
+
+      @include mq($from: desktop) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 48px;
+        max-width: 830px;
+      }
+    }
+  }
+
+  &__select-number {
+    @include mq($from: tablet) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mq($from: desktop) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__form-number {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 343px;
+    width: 100%;
+
+    @include mq($from: tablet) {
+      margin: 0;
+      margin-top: 32px;
+      margin-right: 31px;
+    }
+
+    @include mq($from: desktop) {
+      background: #FFFFFF;
+      box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.05), 0px 1px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 0px 4px 4px 4px;
+      padding: 33px 24px;
+      width: 100%;
+      max-width: 632px;
+      display: flex;
+    }
+
+    .inputSelect {
+      margin-bottom: 16px;
+
+      @include mq($from: desktop) {
+        margin-right: 24px;
+        margin-bottom: 0;
+        flex: 1 1 auto;
+      }
+    }
+
+    .btn {
+      width: 100%;
+
+      @include mq($from: desktop) {
+        max-width: 245px;
+      }
+    }
+  }
+
+  &__numbers-block {
+    margin: 0 auto;
+    max-width: 343px;
+    width: 100%;
+
+    @include mq($from: tablet) {
+      margin: 0;
+    }
+
+    &-title {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 16px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        margin-bottom: -2px;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+        padding: 0;
+      }
+    }
+  }
+
+  &__numbers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 343px;
+    margin: 0 auto;
+
+    li {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      background: rgba(247, 247, 247, 0.1);
+      box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      width: 25%;
+      max-width: 82px;
+      margin: 2px;
+
+      &:nth-child(4n+1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: rgba(247, 247, 247, 0.2);
+      }
+    }
+
+    button {
+      padding: 12px 1px;
+      color: #ffffff;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-second-view {
+      li {
+        width: 20%;
+        max-width: 67px;
+        margin: 1px;
+
+        &:nth-child(4n+1) {
+          margin-left: 1px;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 1px;
+        }
+
+        &:nth-child(5n+1) {
+          margin-left: 0;
+        }
+
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  /* ******************** CHANGE ADDRESS **************** */
+  &__change-address {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+
+    @include mq($from: desktop) {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+
+    h2 {
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: 16px;
+
+      .street__change-address-other-title {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-sub-title {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    &-btn-change {
+      width: 100%;
+      max-width: 343px;
+    }
+
+    &-form-block {
+      background: #FFFFFF;
+      box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.05), 0px 1px 25px rgba(0, 0, 0, 0.1);
+
+      .promo__form-content {
+        box-shadow: none;
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    &-btn-return {
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      top: -50px;
+      left: 12px;
+      font-size: 16px;
+      line-height: 120%;
+      color: #808080;
+      cursor: pointer;
+
+      @include mq($from: desktop) {
+        top: 12px;
+      }
+
+      img {
+        margin-bottom: -2px;
+      }
+    }
+
+    &-with-form {
+      padding-top: 63px;
+    }
+  }
+
+  /* ******************** PROVIDERS CATALOG **************** */
+  .providersCatalog {
+    background-color: #FAFBFC;
+
+    @include mq($from: desktop) {
+      padding-top: 72px;
+    }
+  }
+
+  /* ******************** EASY CHANGE **************** */
+  &__easy-change {
+    padding-top: 40px;
+    padding-bottom: 8px;
+    text-align: center;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FAFBFC;
+
+    @include mq($from: desktop) {
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 6px;
+    }
+
+    &-reasons-list {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      @include mq($from: desktop) {
+        flex-flow: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    &-reasons-article {
+      padding: 40px 0;
+
+      @include mq($from: tablet) {
+        display: flex;
+        max-width: 423px;
+        width: 100%;
+        text-align: left;
+      }
+
+      @include mq($from: desktop) {
+        max-width: 500px;
+      }
+
+      &:not(:last-child) {
+        background: linear-gradient(to right, #FFFFFF 0%, #E0E0E0 50%, #FFFFFF 100%);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 70% 1px;
+
+        @include mq($from: desktop) {
+          background: none;
+        }
+      }
+
+      img {
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &-left {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  /* ******************** FAQ **************** */
+
+  &__faq {
+    padding-top: 40px;
+    padding-bottom: 16px;
+
+    @include mq($from: desktop) {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+  }
+}

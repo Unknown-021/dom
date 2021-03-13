@@ -1,0 +1,235 @@
+.comparePage
+  .crumbs
+    display: none
+
+  @include mq($from: desktop)
+    .crumbs
+      display: block
+      background: #FFF
+
+
+.compareTable
+  &__section
+    &-header
+      display: flex
+      align-items: center
+      padding-top: 9px
+      padding-bottom: 9px
+    &-icon
+      background: #FFF
+      width: 52px
+      height: 52px
+      border-radius: 4px
+      align-items: center
+      justify-content: center
+      margin-right: 12px
+      display: none
+    &-title
+      font-size: 20px
+      font-weight: 600
+      color: $darkGray
+      font-family: Montserrat, Arial, Verdana, sans-serif
+  &__content
+    background: #FFF
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+    margin-bottom: 8px
+    &-row
+      display: flex
+      padding-bottom: 12px
+      padding-top: 12px
+      justify-content: space-between
+      &.bordered
+        border-bottom: 1px solid #efefef
+      &_flex-end
+        align-items: flex-end
+      &_flex-center
+        align-items: center
+      &_pt8
+        padding-top: 8px
+      &_pb8
+        padding-bottom: 8px
+      &_pt4
+        padding-top: 4px
+      &_pb4
+        padding-bottom: 4px
+      &_pt6
+        padding-top: 6px
+      &_pb6
+        padding-bottom: 6px
+      &_pb10
+        padding-bottom: 10px
+
+
+    &-cell
+      flex: calc(50% - 8px) 0 0
+      p
+        margin: 0 0 8px
+        padding: 0 3px
+        &:last-of-type
+          margin-bottom: 0
+  &__text
+    font-size: 14px
+  &__caption
+    font-weight: 600
+    color: $darkGray
+    padding-top: 10px
+    &-title
+      color: $darkGray
+      font-size: 14px
+      padding-top: 8px
+  &__notice
+    font-size: 12px
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    color: $middleGray
+    &_cell
+      font-size: 14px
+      font-family: "SF Pro Text", Arial, Verdana, sans-serif
+
+  &__channels
+    &-list
+      background: #FAFAFA
+      padding: 12px 0 12px 12px
+      border-bottom: 1px solid #E6E6E6
+      display: flex
+      flex-wrap: wrap
+      margin-left: -4px
+      margin-right: -4px
+      margin-top: 8px
+      height: 124px
+      align-items: flex-start
+      img
+        display: inline-block
+        margin: 0 8px 8px 0
+    &-listMore
+      flex: 100% 0 0
+      font-size: 16px
+    &-item
+      display: flex
+    &-icon
+      flex: 24px 0 0
+      max-width: 24px
+      margin-right: 8px
+      img
+        display: block
+        max-width: 100%
+        margin: 0
+
+  &__discount
+    background: $primaryBlue
+    color: #FFF
+    border-radius: 4px
+    padding: 0 12px
+    height: 32px
+    font-size: 12px
+    font-weight: bold
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    text-transform: uppercase
+    display: inline-flex
+    align-items: center
+    letter-spacing: 1px
+
+  &__clear
+    display: flex
+    .compareTable__text
+      width: 170px
+      margin-right: 20px
+      font-weight: 600
+      font-size: 14px
+    .link
+      font-size: 16px
+  &__equipment
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &-image
+      margin-right: 8px
+      width: 54px
+      max-width: 54px
+      min-height: 54px
+      img
+        display: block
+        max-width: 100%
+      &_not-required
+        position: relative
+        img
+          max-width: none
+          position: absolute
+          left: -8px
+          top: -3px
+        + .compareTable__equipment-title
+          color: $darkGray
+
+    &-title
+      line-height: 125%
+      width: 148px
+
+  .cost
+    font-size: 16px
+    b
+      font-weight: 600
+    &__value
+      font-weight: 600
+      font-size: 24px
+      font-family: Montserrat, Arial, Verdana, sans-serif
+      margin-right: 6px
+    &_accent
+      color: $accentPink
+
+  .link-more
+    margin-top: 8px
+
+  @include mq($from: desktop)
+    &__section
+      &-title
+        padding-top: 6px
+      &-header
+        padding-top: 16px
+        padding-bottom: 16px
+      &-icon
+        display: flex
+    &__caption
+      padding-left: 16px
+      &-title
+        padding-left: 16px
+
+    &__text
+      font-size: 16px
+      line-height: 125%
+    &__content
+      padding-top: 8px
+      padding-bottom: 22px
+      margin: 0
+      &_pb20
+        padding-bottom: 20px
+      &_pb12
+        padding-bottom: 12px
+      &_pb8
+        padding-bottom: 8px
+      &_pt12
+        padding-top: 12px
+      //&-row
+        //justify-content: flex-start
+
+      &-cell
+        flex: calc((100% - 60px)/3) 0 0
+        margin-right: 30px
+        padding-left: 16px
+        &:last-of-type
+          margin-right: 0
+    &__channels
+      &-list
+        padding: 16px
+        margin-left: -16px
+        margin-right: 0
+        margin-top: 2px
+        font-size: 0
+        display: block
+      &-item
+        width: 45%
+        align-items: center
+        font-size: 16px
+        margin-bottom: 16px
+        align-self: flex-start
+        display: inline-flex
+        &:nth-child(2n+1)
+          margin-right: 30px

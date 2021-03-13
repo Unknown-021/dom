@@ -1,0 +1,155 @@
+.newBlogs
+  padding-top: 13px
+  padding-bottom: 27px
+  position: relative
+  &__header
+    position: absolute
+    list-style-position: outside
+    top: 0
+    right: 0
+    left: 0
+    &-image
+      position: relative
+      height: 155px
+      overflow: hidden
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: rgba($accentBlue, .7)
+        z-index: 1
+      img
+        display: block
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        object-fit: cover
+    ~ .newBlogs__caption
+      position: relative
+      padding-top: 12px
+      z-index: 2
+      margin: 0 auto
+      text-align: left
+      padding-left: 12px
+      color: #FFF
+      max-width: 1140px
+
+
+  &__caption
+    text-align: center
+    margin-bottom: 0
+    h2
+      margin-bottom: 0
+  @include mq($from: desktop)
+    padding-top: 23px
+    padding-bottom: 70px
+    &__header
+      &-image
+        height: 215px
+      ~ .newBlogs__caption
+        padding-top: 8px
+        h2
+          font-size: 24px
+    &__caption
+      margin-bottom: 13px
+    &__content
+      max-width: 1134px
+      margin-left: auto
+      margin-right: auto
+
+.blogList
+  position: relative
+  .swiper-slide
+    width: 320px
+    margin-right: 12px
+    height: auto
+    display: flex
+  .swiper-container
+    padding-right: 12px
+
+  .swiper-button
+    display: none
+
+  @include mq($from: desktop)
+    .swiper-slide
+      width: 350px
+      margin-right: 30px
+    .swiper-button
+      display: flex
+      top: 80px
+      transform: none
+      &-next
+        right: 0
+      &-prev
+        left: 0
+
+.blogListItem
+  background: #FFFF
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  overflow: hidden
+  max-width: 320px
+  margin: 0 15px
+  display: flex
+  flex-direction: column
+  color: #000
+  width: 100%
+  &:hover
+    color: #000
+    .blogListItem__title
+      color: $accentBlue
+
+  &__image
+    position: relative
+    height: 178px
+    > img
+      max-height: 100%
+      position: absolute
+      object-fit: cover
+      display: block
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(30, 78, 157, 0.4) 0%, rgba(30, 78, 157, 0) 100%)
+      z-index: 1
+  &__time
+    display: flex
+    align-items: center
+    color: #FFF
+    position: absolute
+    z-index: 2
+    padding: 12px
+    line-height: 1
+    &-icon
+      margin-right: 3px
+      margin-top: -1px
+  &__title
+    font-size: 20px
+    font-weight: 600
+    font-family: Montserrat, Arial, Verdana, sans-serif
+    margin-bottom: 6px
+
+  &__announce
+    line-height: 125%
+  &__content
+    padding: 16px 16px 15px
+  &__link
+    padding: 0 20px 14px
+    font-weight: 600
+    margin-top: auto
+
+  @include mq($from: desktop)
+    max-width: 350px
